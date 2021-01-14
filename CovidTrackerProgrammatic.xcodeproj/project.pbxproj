@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		93ED3504258B9D1B0084020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED3503258B9D1B0084020A /* AppDelegate.swift */; };
 		93ED3506258B9D1B0084020A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED3505258B9D1B0084020A /* SceneDelegate.swift */; };
-		93ED3508258B9D1B0084020A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED3507258B9D1B0084020A /* ViewController.swift */; };
-		93ED350B258B9D1B0084020A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93ED3509258B9D1B0084020A /* Main.storyboard */; };
 		93ED350D258B9D1F0084020A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93ED350C258B9D1F0084020A /* Assets.xcassets */; };
 		93ED3510258B9D1F0084020A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93ED350E258B9D1F0084020A /* LaunchScreen.storyboard */; };
+		93ED3519258B9D7F0084020A /* CovidTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED3518258B9D7F0084020A /* CovidTrackerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93ED3500258B9D1B0084020A /* CovidTrackerProgrammatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidTrackerProgrammatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93ED3503258B9D1B0084020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93ED3505258B9D1B0084020A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93ED3507258B9D1B0084020A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93ED350A258B9D1B0084020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93ED350C258B9D1F0084020A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93ED350F258B9D1F0084020A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93ED3511258B9D1F0084020A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93ED3518258B9D7F0084020A /* CovidTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidTrackerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +56,7 @@
 			children = (
 				93ED3503258B9D1B0084020A /* AppDelegate.swift */,
 				93ED3505258B9D1B0084020A /* SceneDelegate.swift */,
-				93ED3507258B9D1B0084020A /* ViewController.swift */,
-				93ED3509258B9D1B0084020A /* Main.storyboard */,
+				93ED3518258B9D7F0084020A /* CovidTrackerViewController.swift */,
 				93ED350C258B9D1F0084020A /* Assets.xcassets */,
 				93ED350E258B9D1F0084020A /* LaunchScreen.storyboard */,
 				93ED3511258B9D1F0084020A /* Info.plist */,
@@ -126,7 +123,6 @@
 			files = (
 				93ED3510258B9D1F0084020A /* LaunchScreen.storyboard in Resources */,
 				93ED350D258B9D1F0084020A /* Assets.xcassets in Resources */,
-				93ED350B258B9D1B0084020A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93ED3508258B9D1B0084020A /* ViewController.swift in Sources */,
 				93ED3504258B9D1B0084020A /* AppDelegate.swift in Sources */,
+				93ED3519258B9D7F0084020A /* CovidTrackerViewController.swift in Sources */,
 				93ED3506258B9D1B0084020A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +142,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93ED3509258B9D1B0084020A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93ED350A258B9D1B0084020A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93ED350E258B9D1F0084020A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
