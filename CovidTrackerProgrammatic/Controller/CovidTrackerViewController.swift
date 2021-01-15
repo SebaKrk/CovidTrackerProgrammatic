@@ -7,13 +7,17 @@
 
 import UIKit
 
-class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
+class CovidTrackerViewController: UIViewController{
     
     var tableView = UITableView()
     let reUseIdentifier = "Cell"
-    let searchBar = UISearchBar()
     let serwice = Service()
     var covidData = [CovidModel]()
+    var fetchImage = FetchImage()
+    
+    let searchBar = UISearchBar()
+    var inSearchMode = false
+    var filterCovidData = [CovidModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,16 +83,45 @@ class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
 
 extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return covidData.count
+        return inSearchMode ? filterCovidData.count : covidData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reUseIdentifier, for: indexPath) as! CovidCell
         
-        let model = covidData[indexPath.row]
+        let model = inSearchMode ? filterCovidData[indexPath.row] : covidData[indexPath.row]
         cell.update(model: model)
+        
+        let imageURL = model.countryInfo?.flag
+        
+        fetchImage.fetchImage(withUrlString: imageURL!) { (image) in
+            DispatchQueue.main.async {
+                cell.countryFlag.image = image
+            }
+        }
         return cell
     }
+}
+
+// MARK: - UISearchBarDelegate
+
+extension CovidTrackerViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.titleView = nil
+        searchBarButton()
+        inSearchMode = false
+        tableView.reloadData()
+    }
     
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" || searchBar.text == nil {
+            inSearchMode = false
+            tableView.reloadData()
+            view.endEditing(true)
+        } else {
+            inSearchMode = true
+            filterCovidData = covidData.filter({ $0.country?.range(of: searchText) != nil })
+            tableView.reloadData()
+        }
+    }
 }

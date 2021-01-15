@@ -133,7 +133,7 @@ class CovidCell : UITableViewCell {
         containerView.leadingAnchor.constraint(equalTo: countryFlag.trailingAnchor, constant: 10).isActive = true
         containerView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10).isActive = true
         containerView.heightAnchor.constraint(equalToConstant: 140).isActive = true
-        containerView.backgroundColor = .blue
+//        containerView.backgroundColor = .blue
         
         containerView.addSubview(countryLabel)
         countryLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -179,6 +179,5 @@ class CovidCell : UITableViewCell {
         todatDeathLabel.translatesAutoresizingMaskIntoConstraints = false
         todatDeathLabel.topAnchor.constraint(equalTo: todayCasesLabel.bottomAnchor).isActive = true
         todatDeathLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        
     }
 }
