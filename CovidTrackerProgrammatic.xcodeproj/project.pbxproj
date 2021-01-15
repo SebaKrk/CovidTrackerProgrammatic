@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93939A0C25B161A50027D843 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A0B25B161A50027D843 /* CovidModel.swift */; };
 		93ED3504258B9D1B0084020A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED3503258B9D1B0084020A /* AppDelegate.swift */; };
 		93ED3506258B9D1B0084020A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ED3505258B9D1B0084020A /* SceneDelegate.swift */; };
 		93ED350D258B9D1F0084020A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93ED350C258B9D1F0084020A /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93939A0B25B161A50027D843 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
 		93ED3500258B9D1B0084020A /* CovidTrackerProgrammatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidTrackerProgrammatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93ED3503258B9D1B0084020A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93ED3505258B9D1B0084020A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				93ED3503258B9D1B0084020A /* AppDelegate.swift */,
 				93ED3505258B9D1B0084020A /* SceneDelegate.swift */,
 				93ED3518258B9D7F0084020A /* CovidTrackerViewController.swift */,
+				93939A0B25B161A50027D843 /* CovidModel.swift */,
 				93ED350C258B9D1F0084020A /* Assets.xcassets */,
 				93ED350E258B9D1F0084020A /* LaunchScreen.storyboard */,
 				93ED3511258B9D1F0084020A /* Info.plist */,
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93ED3504258B9D1B0084020A /* AppDelegate.swift in Sources */,
+				93939A0C25B161A50027D843 /* CovidModel.swift in Sources */,
 				93ED3519258B9D7F0084020A /* CovidTrackerViewController.swift in Sources */,
 				93ED3506258B9D1B0084020A /* SceneDelegate.swift in Sources */,
 			);
