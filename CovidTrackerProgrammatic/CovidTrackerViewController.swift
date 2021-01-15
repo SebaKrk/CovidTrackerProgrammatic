@@ -7,18 +7,23 @@
 
 import UIKit
 
-class CovidTrackerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
 
     var tableView = UITableView()
+    let reUseIdentifier = "Cell"
+    let searchBar = UISearchBar()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setTableView()
+        searchBarButton()
         
         
         
     }
+    
 // MARK: - TableView
     
     func setTableView() {
@@ -27,9 +32,27 @@ class CovidTrackerViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 150
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reUseIdentifier)
 
     }
+  
+//  MARK: - SearchBar
     
+    func searchBarButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchBar))
+    }
+    @objc func showSearchBar() {
+        setUpSearchBar()
+    }
+    func setUpSearchBar() {
+        searchBar.sizeToFit()
+        searchBar.showsCancelButton = true
+        searchBar.becomeFirstResponder()
+        searchBar.tintColor = .systemBlue
+        searchBar.delegate = self
+        navigationItem.rightBarButtonItem = nil
+        navigationItem.titleView = searchBar
+    }
     func setupTableViewConstraint() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,15 +61,17 @@ class CovidTrackerViewController: UIViewController, UITableViewDelegate, UITable
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-    
+
+}
+
+extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         return UITableViewCell()
     }
     
-
+    
 }
