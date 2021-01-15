@@ -26,3 +26,5 @@ struct Service {
 
     }
 }
+
+// https://disease.sh/docs/

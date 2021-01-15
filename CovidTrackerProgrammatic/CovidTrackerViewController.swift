@@ -8,23 +8,37 @@
 import UIKit
 
 class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
-
+    
     var tableView = UITableView()
     let reUseIdentifier = "Cell"
     let searchBar = UISearchBar()
-    
+    let serwice = Service()
+    var covidData = [CovidModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setTableView()
         searchBarButton()
-        
+        loadData()
         
         
     }
     
-// MARK: - TableView
+    //    MARK: - get JSON
+    
+    func loadData() {
+        serwice.getJason {
+            data in
+            self.covidData = data
+            DispatchQueue.main.async {
+                print(self.covidData) // Check JSON response
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    // MARK: - TableView
     
     func setTableView() {
         
@@ -33,10 +47,10 @@ class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
         tableView.dataSource = self
         tableView.rowHeight = 150
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reUseIdentifier)
-
+        
     }
-  
-//  MARK: - SearchBar
+    
+    //  MARK: - SearchBar
     
     func searchBarButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchBar))
@@ -61,7 +75,7 @@ class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-
+    
 }
 
 extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource {
