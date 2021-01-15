@@ -46,7 +46,7 @@ class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 150
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reUseIdentifier)
+        tableView.register(CovidCell.self, forCellReuseIdentifier: reUseIdentifier)
         
     }
     
@@ -80,11 +80,15 @@ class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
 
 extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return covidData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: reUseIdentifier, for: indexPath) as! CovidCell
+        
+        cell.countryLabel.text = covidData[indexPath.row].country
+        
+        return cell
     }
     
     

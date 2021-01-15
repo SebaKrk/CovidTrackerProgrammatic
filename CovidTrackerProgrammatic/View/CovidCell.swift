@@ -23,6 +23,13 @@ class CovidCell : UITableViewCell {
         return image
     }()
     
+    let countryLabel : UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 26)
+        label.textColor = .black
+        return label
+    }()
+    
     //    MARK: INIT
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -52,6 +59,11 @@ class CovidCell : UITableViewCell {
         containerView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10).isActive = true
         containerView.heightAnchor.constraint(equalToConstant: 140).isActive = true
         containerView.backgroundColor = .blue
+        
+        containerView.addSubview(countryLabel)
+        countryLabel.translatesAutoresizingMaskIntoConstraints = false
+        countryLabel.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        countryLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 5).isActive = true
         
     }
 }
