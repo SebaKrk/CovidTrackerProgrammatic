@@ -32,7 +32,6 @@ class CovidTrackerViewController: UIViewController, UISearchBarDelegate{
             data in
             self.covidData = data
             DispatchQueue.main.async {
-                print(self.covidData) // Check JSON response
                 self.tableView.reloadData()
             }
         }
@@ -86,8 +85,8 @@ extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reUseIdentifier, for: indexPath) as! CovidCell
         
-        cell.countryLabel.text = covidData[indexPath.row].country
-        
+        let model = covidData[indexPath.row]
+        cell.update(model: model)
         return cell
     }
     

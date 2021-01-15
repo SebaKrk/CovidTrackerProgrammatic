@@ -105,6 +105,18 @@ class CovidCell : UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func update(model: CovidModel){
+        countryLabel.text = model.country
+        continentLabel.text = model.continent
+        casesLabel.text = String("Case: \(model.cases!)")
+        deathLabel.text = String("Death: \(model.deaths!)")
+        activeLabel.text = String("Active: \(model.active!)")
+        testLabel.text = String("Test: \(model.tests!)")
+        todayCasesLabel.text = String("Cases: \(model.todayCases!)")
+        todatDeathLabel.text = String("Death: \(model.todayDeaths!)")
+    }
+    
+    
     func setupViewConstarints() {
         
         addSubview(countryFlag)
