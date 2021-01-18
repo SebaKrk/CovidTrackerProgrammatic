@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9365198025B5BCF400662A1A /* CovidMoreInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365197F25B5BCF400662A1A /* CovidMoreInfoVC.swift */; };
+		9365198825B5BF8800662A1A /* MoreInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365198725B5BF8800662A1A /* MoreInfoCell.swift */; };
 		93939A0C25B161A50027D843 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A0B25B161A50027D843 /* CovidModel.swift */; };
 		93939A0F25B162210027D843 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A0E25B162210027D843 /* Service.swift */; };
 		93939A1925B163A30027D843 /* CovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A1825B163A30027D843 /* CovidCell.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		9365197F25B5BCF400662A1A /* CovidMoreInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMoreInfoVC.swift; sourceTree = "<group>"; };
+		9365198725B5BF8800662A1A /* MoreInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoCell.swift; sourceTree = "<group>"; };
 		93939A0B25B161A50027D843 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
 		93939A0E25B162210027D843 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		93939A1825B163A30027D843 /* CovidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCell.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				93939A1825B163A30027D843 /* CovidCell.swift */,
+				9365198725B5BF8800662A1A /* MoreInfoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				93939A1E25B1B8220027D843 /* FetchImage.swift in Sources */,
 				93ED3504258B9D1B0084020A /* AppDelegate.swift in Sources */,
 				93939A0C25B161A50027D843 /* CovidModel.swift in Sources */,
+				9365198825B5BF8800662A1A /* MoreInfoCell.swift in Sources */,
 				93939A0F25B162210027D843 /* Service.swift in Sources */,
 				93ED3519258B9D7F0084020A /* CovidTrackerViewController.swift in Sources */,
 				9365198025B5BCF400662A1A /* CovidMoreInfoVC.swift in Sources */,
