@@ -98,6 +98,16 @@ extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = CovidMoreInfoVC()
+        
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        navVC.modalTransitionStyle = .flipHorizontal
+        
+        present(navVC, animated: true, completion: nil)
+    }
 }
 
 // MARK: - UISearchBarDelegate
