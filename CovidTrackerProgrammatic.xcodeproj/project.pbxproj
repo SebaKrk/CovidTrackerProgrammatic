@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9365198025B5BCF400662A1A /* CovidMoreInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365197F25B5BCF400662A1A /* CovidMoreInfoVC.swift */; };
 		93939A0C25B161A50027D843 /* CovidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A0B25B161A50027D843 /* CovidModel.swift */; };
 		93939A0F25B162210027D843 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A0E25B162210027D843 /* Service.swift */; };
 		93939A1925B163A30027D843 /* CovidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93939A1825B163A30027D843 /* CovidCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9365197F25B5BCF400662A1A /* CovidMoreInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMoreInfoVC.swift; sourceTree = "<group>"; };
 		93939A0B25B161A50027D843 /* CovidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModel.swift; sourceTree = "<group>"; };
 		93939A0E25B162210027D843 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		93939A1825B163A30027D843 /* CovidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCell.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		93939A1625B1638C0027D843 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9365197F25B5BCF400662A1A /* CovidMoreInfoVC.swift */,
 				93ED3518258B9D7F0084020A /* CovidTrackerViewController.swift */,
 			);
 			path = Controller;
@@ -182,6 +185,7 @@
 				93939A0C25B161A50027D843 /* CovidModel.swift in Sources */,
 				93939A0F25B162210027D843 /* Service.swift in Sources */,
 				93ED3519258B9D7F0084020A /* CovidTrackerViewController.swift in Sources */,
+				9365198025B5BCF400662A1A /* CovidMoreInfoVC.swift in Sources */,
 				93ED3506258B9D1B0084020A /* SceneDelegate.swift in Sources */,
 				93939A1925B163A30027D843 /* CovidCell.swift in Sources */,
 			);

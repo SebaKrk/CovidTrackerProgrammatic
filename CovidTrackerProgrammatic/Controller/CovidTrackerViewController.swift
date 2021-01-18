@@ -25,8 +25,6 @@ class CovidTrackerViewController: UIViewController{
         setTableView()
         searchBarButton()
         loadData()
-        
-        
     }
     
     //    MARK: - get JSON
@@ -50,7 +48,6 @@ class CovidTrackerViewController: UIViewController{
         tableView.dataSource = self
         tableView.rowHeight = 150
         tableView.register(CovidCell.self, forCellReuseIdentifier: reUseIdentifier)
-        
     }
     
     //  MARK: - SearchBar
