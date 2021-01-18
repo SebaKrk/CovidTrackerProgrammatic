@@ -100,7 +100,17 @@ extension CovidTrackerViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model =  inSearchMode ? filterCovidData[indexPath.row] : covidData[indexPath.row]
+        
         let vc = CovidMoreInfoVC()
+        vc.viewInfo.set(model: model)
+        
+        let imageURL = model.countryInfo?.flag
+        fetchImage.fetchImage(withUrlString: imageURL!) { (image) in
+            DispatchQueue.main.async {
+                vc.viewInfo.countryImage.image = image
+            }
+        }
         
         let navVC = UINavigationController(rootViewController: vc)
         navVC.modalPresentationStyle = .fullScreen

@@ -76,8 +76,8 @@
 		93939A1B25B163B00027D843 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93939A1825B163A30027D843 /* CovidCell.swift */,
 				9365198725B5BF8800662A1A /* MoreInfoCell.swift */,
+				93939A1825B163A30027D843 /* CovidCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
